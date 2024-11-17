@@ -1,14 +1,17 @@
 "use client";
-import { BANNER_SLIDER_ITEMS, CAROUSAL_PROFILES } from "@/utils/constants";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Typography from "../atoms/Typography";
+import { BannerSectionInterface } from "./organismsInterface";
 
-export default function BannerSection({}) {
-  const totalItems = CAROUSAL_PROFILES.length;
+export default function BannerSection({
+  carousalProfiles,
+  bannerSliderItems,
+}: BannerSectionInterface) {
+  const totalItems = carousalProfiles.length;
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleItems, setVisibleItems] = useState(BANNER_SLIDER_ITEMS);
+  const [visibleItems, setVisibleItems] = useState(bannerSliderItems);
   const slideInterval = 5000;
 
   useEffect(() => {
@@ -36,9 +39,9 @@ export default function BannerSection({}) {
     const prevIndex = (currentIndex - 1 + totalItems) % totalItems;
     const nextIndex = (currentIndex + 1) % totalItems;
     return [
-      CAROUSAL_PROFILES[prevIndex],
-      CAROUSAL_PROFILES[currentIndex],
-      CAROUSAL_PROFILES[nextIndex],
+      carousalProfiles[prevIndex],
+      carousalProfiles[currentIndex],
+      carousalProfiles[nextIndex],
     ];
   };
 

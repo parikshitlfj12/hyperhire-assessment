@@ -5,10 +5,8 @@ import Image from "next/image";
 import Dropdown from "../atoms/Dropdown";
 import Button from "../atoms/Button";
 import Link from "next/link";
-import { DropdownItem } from "../atoms/atomInterface";
-interface HeaderProps {
-  dropDownOptions: DropdownItem[];
-}
+import { HeaderProps } from "./organismsInterface";
+
 
 export default function Header({ dropDownOptions }: HeaderProps) {
   return (

@@ -2,13 +2,8 @@ import React from "react";
 import ColorLogo from "@/assets/logoColor.png";
 import Right from "@/assets/right.png";
 import Image from "next/image";
-import { DescriptionAbout, DescriptionItem } from "./organismsInterface";
+import { DescriptionSectionProps } from "./organismsInterface";
 import Typography from "../atoms/Typography";
-
-interface DescriptionSectionProps {
-  descriptionItems: DescriptionItem[];
-  descriptionAbout: DescriptionAbout[];
-}
 
 export default function DescriptionSection({
   descriptionItems,
