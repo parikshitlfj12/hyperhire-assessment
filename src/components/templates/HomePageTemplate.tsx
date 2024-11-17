@@ -1,15 +1,18 @@
 import React from "react";
 import BannerSection from "../organisms/banner-section";
-import DescriptionSection from "../organisms/description-section";
-import { DROPDOWN_OPTIONS } from "@/utils/constants";
+import { DESCRIPTION_ABOUT, DESCRIPTION_ITEMS, DROPDOWN_OPTIONS } from "@/utils/constants";
 import Header from "../organisms/Header";
+import DescriptionSection from "../organisms/DescriptionSection";
 
 export default function HomePageTemplate({}) {
   return (
     <>
-      <Header dropDownOptions={DROPDOWN_OPTIONS}/>
+      <Header dropDownOptions={DROPDOWN_OPTIONS} />
       <BannerSection />
-      <DescriptionSection />
+      <DescriptionSection
+        descriptionItems={DESCRIPTION_ITEMS}
+        descriptionAbout={DESCRIPTION_ABOUT}
+      />
     </>
   );
 }
