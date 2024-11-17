@@ -14,11 +14,12 @@ export default function DescriptionSection({
   descriptionAbout,
 }: DescriptionSectionProps) {
   const itemIcons = [itemIcon1, itemIcon2, itemIcon3, itemIcon4];
+
   return (
-    <div className="pt-[100px] bg-[#FBFBFB] pb-[100px] ">
+    <div className="pt-[100px] bg-[#FBFBFB] pb-[100px] px-5">
       <div className="max-w-7xl mx-auto">
-        {/* First */}
-        <div className="flex gap-8 justify-between items-start">
+        {/* First Section */}
+        <div className="flex flex-col md:flex-row gap-8 justify-between items-start">
           <div>
             <div className="flex gap-2 items-start">
               <Image src={ColorLogo} width={50} height={30} alt="color-logo" />
@@ -35,10 +36,13 @@ export default function DescriptionSection({
             </Typography>
           </div>
 
-          <div className="flex justify-between items-center gap-4">
+          <div className="flex justify-between items-center flex-wrap gap-4 mt-6 md:mt-0">
             {descriptionItems.map((item, index) => {
               return (
-                <div key={item.title} className="bg-white p-5 rounded-[12px]">
+                <div
+                  key={item.title}
+                  className="bg-white p-5 rounded-[12px] mb-6 md:mb-0 flex-1 min-w-[200px]"
+                >
                   <Image
                     src={itemIcons[index] ?? 0}
                     width={40}
@@ -64,11 +68,14 @@ export default function DescriptionSection({
           </div>
         </div>
 
-        {/* Second */}
-        <div className="mt-[40px] flex justify-start items-start gap-[70px]">
+        {/* Second Section */}
+        <div className="mt-[40px] flex gap-8 justify-start items-start flex-wrap">
           {descriptionAbout.map((item) => {
             return (
-              <div key={item.title} className="max-w-[25%]">
+              <div
+                key={item.title}
+                className="flex-1 mb-6 md:mb-0  min-w-[200px]"
+              >
                 <Typography className="mt-1 font-bold text-[14px]">
                   {item.title}
                 </Typography>
@@ -83,7 +90,7 @@ export default function DescriptionSection({
           })}
         </div>
 
-        {/* Third */}
+        {/* Third Section */}
         <div className="mt-[40px]">
           <Typography className="mt-3 font-bold text-[14px] max-w-[250px] text-[#5E626F]">
             ⓒ 2023 Hyperhire
