@@ -1,8 +1,9 @@
-'use client'
+"use client";
 import { BANNER_SLIDER_ITEMS, CAROUSAL_PROFILES } from "@/utils/constants";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import Typography from "../atoms/Typography";
 
 export default function BannerSection({}) {
   const totalItems = CAROUSAL_PROFILES.length;
@@ -50,22 +51,22 @@ export default function BannerSection({}) {
           {/* Header Section */}
           <section className="mb-12">
             {/* Tag */}
-            <div className="inline-block bg-[#FFFFFF] text-[#40E2E8] font-semibold px-4 py-1 rounded-[8px] text-sm mb-4">
+            <Typography className="inline-block bg-[#FFFFFF] text-[#40E2E8] font-semibold px-4 py-1 rounded-[8px] text-sm mb-4">
               풀타임, 파트타임
-            </div>
+            </Typography>
 
             {/* Main Title */}
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">
+            <Typography className="text-3xl md:text-4xl font-bold mb-4">
               최고의 실력을 가진 외국인 인재를 찾고 계신가요?
-            </h1>
+            </Typography>
 
             {/* Subtext */}
-            <p className="text-base md:text-lg mb-4">
+            <Typography className="text-base md:text-lg mb-4">
               법률 및 인사관리 부담없이 1주일 이내에 원격으로 채용해보세요.
-            </p>
+            </Typography>
 
             {/* Link */}
-            <a href="#" className=" underline">
+            <a href="#" className="underline">
               개발자가 필요하신가요?
             </a>
           </section>
@@ -73,22 +74,29 @@ export default function BannerSection({}) {
           {/* Additional Information Section */}
           <section className="flex flex-col md:flex-row md:space-x-6 ">
             <div className="p-6 rounded-lg max-w-sm mb-4 md:mb-0">
-              <p className="font-semibold">평균 월 120만원</p>
-              <p>임금을 해당 국가를 기준으로 계산합니다.</p>
+              <Typography className="font-semibold">평균 월 120만원</Typography>
+              <Typography>임금을 해당 국가를 기준으로 계산합니다.</Typography>
             </div>
             <div className="p-6 rounded-lg max-w-sm mb-4 md:mb-0">
-              <p className="font-semibold">최대 3회 인력교체</p>
-              <p>막상 채용해보니 맞지 않아도 걱정하지 마세요.</p>
+              <Typography className="font-semibold">
+                최대 3회 인력교체
+              </Typography>
+              <Typography>
+                막상 채용해보니 맞지 않아도 걱정하지 마세요.
+              </Typography>
             </div>
             <div className="p-6 rounded-lg max-w-sm">
-              <p className="font-semibold">평균 3일, 최대 10일</p>
-              <p>급하게 사람이 필요한 경우에도 빠른 채용이 가능합니다.</p>
+              <Typography className="font-semibold">
+                평균 3일, 최대 10일
+              </Typography>
+              <Typography>
+                급하게 사람이 필요한 경우에도 빠른 채용이 가능합니다.
+              </Typography>
             </div>
           </section>
         </div>
 
         {/* Card Section */}
-        {/* flex flex-col w-[50%] justify-center items-center p-8 */}
         <div className="flex flex-col w-[50%] justify-center items-center">
           {/* Tooltip Above the Carousel */}
           <div className="relative flex justify-center items-center mb-8">
@@ -98,9 +106,9 @@ export default function BannerSection({}) {
                 <span className="text-lg">💵</span>
               </div>
               {/* Text */}
-              <span className="text-md font-bold">
+              <Typography className="text-md font-bold">
                 {displayedItems[1].tooltip}
-              </span>
+              </Typography>
             </div>
 
             {/* Tooltip Arrow */}
@@ -123,12 +131,12 @@ export default function BannerSection({}) {
                     className="rounded-full w-20 h-20 border-4 border-white"
                   />
                 </div>
-                <h3 className="text-lg font-bold text-center">
+                <Typography className="text-lg font-bold text-center">
                   {displayedItems[0].name}
-                </h3>
-                <p className="text-blue-600 text-center">
+                </Typography>
+                <Typography className="text-blue-600 text-center">
                   {displayedItems[0].role}
-                </p>
+                </Typography>
                 <div className="flex flex-wrap justify-center mt-4 space-x-2 space-y-2">
                   {displayedItems[0].skills.map((skill, index) => (
                     <span
@@ -150,12 +158,12 @@ export default function BannerSection({}) {
                     className="rounded-full w-24 h-24 border-4 border-white"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-center">
+                <Typography className="text-xl font-bold text-center">
                   {displayedItems[1].name}
-                </h3>
-                <p className="text-blue-600 text-center">
+                </Typography>
+                <Typography className="text-blue-600 text-center">
                   {displayedItems[1].role}
-                </p>
+                </Typography>
                 <div className="flex flex-wrap justify-center mt-4 space-x-2 space-y-2">
                   {displayedItems[1].skills.map((skill, index) => (
                     <span
@@ -177,12 +185,12 @@ export default function BannerSection({}) {
                     className="rounded-full w-20 h-20 border-4 border-white"
                   />
                 </div>
-                <h3 className="text-lg font-bold text-center">
+                <Typography className="text-lg font-bold text-center">
                   {displayedItems[2].name}
-                </h3>
-                <p className="text-blue-600 text-center">
+                </Typography>
+                <Typography className="text-blue-600 text-center">
                   {displayedItems[2].role}
-                </p>
+                </Typography>
                 <div className="flex flex-wrap justify-center mt-4 space-x-2 space-y-2">
                   {displayedItems[2].skills.map((skill, index) => (
                     <span

@@ -21,6 +21,6 @@ export type TooltipProps = {
 };
 
 export type TypographyProps = {
-  className: string;
+  className?: string;
   children: ReactNode | string;
 };
