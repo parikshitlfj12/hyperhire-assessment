@@ -1,13 +1,13 @@
-import Header from "../organisms/Header";
-import BannerSection from "../organisms/BannerSection";
-import DescriptionSection from "../organisms/DescriptionSection";
-import { DropdownItem } from "../atoms/interface";
+import Header from "@/components/organisms/Header";
+import BannerSection from "@/components/organisms/BannerSection";
+import DescriptionSection from "@/components/organisms/DescriptionSection";
+import { DropdownItem } from "@/components/atoms/interface";
 import {
   BannerSliderItem,
   ProfileItem,
   DescriptionItem,
   DescriptionAbout,
-} from "../organisms/interface";
+} from "@/components/organisms/interface";
 
 interface HomePageTemplateProps {
   bannerSliderItems: BannerSliderItem[];
