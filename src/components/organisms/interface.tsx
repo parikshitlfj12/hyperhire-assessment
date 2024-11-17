@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 
-import { DropdownItem } from "../atoms/atomInterface";
+import { DropdownItem } from "../atoms/interface";
 import { ReactNode } from "react";
 
 export interface HeaderProps {

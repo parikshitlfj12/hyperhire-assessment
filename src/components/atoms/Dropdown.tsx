@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
-import { DropdownItem, DropdownProps } from "./atomInterface";
+import { DropdownItem, DropdownProps } from "./interface";
 
 const DropdownButton: React.FC<{ label: string; onClick: () => void }> = ({
   label,

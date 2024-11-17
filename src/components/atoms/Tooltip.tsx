@@ -1,4 +1,4 @@
-import { TooltipProps } from "./atomInterface";
+import { TooltipProps } from "./interface";
 
 export default function Tooltip({ text, icon = "💵" }: TooltipProps) {
   return (

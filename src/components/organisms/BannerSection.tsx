@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Typography from "../atoms/Typography";
-import { BannerSectionInterface } from "./organismsInterface";
+import { BannerSectionInterface } from "./interface";
 
 export default function BannerSection({
   carousalProfiles,

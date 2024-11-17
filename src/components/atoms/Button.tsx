@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonProps } from "./atomInterface";
+import { ButtonProps } from "./interface";
 
 const Button: React.FC<ButtonProps> = ({
   children,

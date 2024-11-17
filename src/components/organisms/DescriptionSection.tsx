@@ -2,7 +2,7 @@ import React from "react";
 import ColorLogo from "@/assets/logoColor.png";
 import Right from "@/assets/right.png";
 import Image from "next/image";
-import { DescriptionSectionProps } from "./organismsInterface";
+import { DescriptionSectionProps } from "./interface";
 import Typography from "../atoms/Typography";
 
 export default function DescriptionSection({
