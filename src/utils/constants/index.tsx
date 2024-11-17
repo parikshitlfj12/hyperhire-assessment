@@ -1,10 +1,3 @@
-import itemIcon1 from "@/assets/itemIcon1.png";
-import itemIcon2 from "@/assets/itemIcon2.png";
-import itemIcon3 from "@/assets/itemIcon3.png";
-import itemIcon4 from "@/assets/itemIcon4.png";
-
-import Profile from "@/assets/profile.png";
-
 export const DROPDOWN_OPTIONS = [
   { label: "해외 개발자 원격 채용" },
   {
@@ -19,22 +12,18 @@ export const DESCRIPTION_ITEMS = [
   {
     title: "해외 개발자 원격 채용",
     subTitle: "바로가기",
-    logo: itemIcon1,
   },
   {
     title: "외국인 원격 채용 (비개발)",
     subTitle: "바로가기",
-    logo: itemIcon2,
   },
   {
     title: "한국어 가능 외국인 채용",
     subTitle: "바로가기",
-    logo: itemIcon3,
   },
   {
     title: "해외 개발자 활용 서비스",
     subTitle: "바로가기",
-    logo: itemIcon4,
   },
 ];
 
@@ -65,7 +54,6 @@ export const CAROUSAL_PROFILES = [
   {
     name: "Abhishek Gupta",
     role: "마케팅 · 2y+",
-    profileImage: Profile,
     skills: ["마케팅= 제작", "인스타그램 관리", "트위터 관리"],
     tooltip: "월 100만원",
   },
@@ -73,21 +61,18 @@ export const CAROUSAL_PROFILES = [
   {
     name: "Parikshit Gupta",
     role: "마케팅 · 4y+",
-    profileImage: Profile,
     skills: ["마케팅= 제작", "인스타그램 관리", "트위터 관리"],
     tooltip: "월 100만원",
   },
   {
     name: "RishubKavya Gupta",
     role: "마케팅 · 5y+",
-    profileImage: Profile,
     skills: ["마케팅= 제작", "인스타그램 관리", "트위터 관리"],
     tooltip: "월 100만원",
   },
   {
     name: "Kavya Gupta",
     role: "마케팅 · 1y+",
-    profileImage: Profile,
     skills: ["마케팅= 제작", "인스타그램 관리", "트위터 관리"],
     tooltip: "월 100만원",
   },

@@ -4,11 +4,16 @@ import Right from "@/assets/right.png";
 import Image from "next/image";
 import { DescriptionSectionProps } from "./interface";
 import Typography from "../atoms/Typography";
+import itemIcon1 from "@/assets/itemIcon1.png";
+import itemIcon2 from "@/assets/itemIcon2.png";
+import itemIcon3 from "@/assets/itemIcon3.png";
+import itemIcon4 from "@/assets/itemIcon4.png";
 
 export default function DescriptionSection({
   descriptionItems,
   descriptionAbout,
 }: DescriptionSectionProps) {
+  const itemIcons = [itemIcon1, itemIcon2, itemIcon3, itemIcon4];
   return (
     <div className="pt-[100px] bg-[#FBFBFB] pb-[100px] ">
       <div className="max-w-7xl mx-auto">
@@ -31,11 +36,11 @@ export default function DescriptionSection({
           </div>
 
           <div className="flex justify-between items-center gap-4">
-            {descriptionItems.map((item) => {
+            {descriptionItems.map((item, index) => {
               return (
                 <div key={item.title} className="bg-white p-5 rounded-[12px]">
                   <Image
-                    src={item.logo}
+                    src={itemIcons[index] ?? 0}
                     width={40}
                     height={40}
                     alt={item.title}

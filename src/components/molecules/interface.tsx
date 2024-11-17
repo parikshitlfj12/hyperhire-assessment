@@ -1,5 +1,4 @@
 export interface ProfileCardProps {
-  profileImage: string;
   name: string;
   role: string;
   skills: string[];

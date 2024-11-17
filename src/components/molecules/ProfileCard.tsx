@@ -2,9 +2,9 @@ import React from "react";
 import Image from "next/image";
 import Typography from "../atoms/Typography";
 import { ProfileCardProps } from "./interface";
+import Profile from "@/assets/profile.png";
 
 const ProfileCard: React.FC<ProfileCardProps> = ({
-  profileImage,
   name,
   role,
   skills,
@@ -35,7 +35,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
     >
       <div className="relative flex justify-center mb-4">
         <Image
-          src={profileImage}
+          src={Profile}
           alt={name}
           className="rounded-full w-20 h-20 border-4 border-white"
           width={80}

@@ -1,7 +1,6 @@
 import { StaticImageData } from "next/image";
 
 import { DropdownItem } from "../atoms/interface";
-import { ReactNode } from "react";
 
 export interface HeaderProps {
   dropDownOptions: DropdownItem[];
@@ -15,7 +14,7 @@ export interface DescriptionSectionProps {
 export interface DescriptionItem {
   title: string;
   subTitle: string;
-  logo: StaticImageData;
+  logo: string;
 }
 
 export interface DescriptionAbout {

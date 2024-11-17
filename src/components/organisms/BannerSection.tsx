@@ -138,7 +138,6 @@ export default function BannerSection({
                 return (
                   <ProfileCard
                     key={index}
-                    profileImage={item.profileImage.src}
                     name={item.name}
                     role={item.role}
                     skills={item.skills}
