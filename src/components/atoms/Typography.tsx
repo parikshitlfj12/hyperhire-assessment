@@ -1,10 +1,6 @@
-import React, { ReactNode } from "react";
+import React from "react";
+import { TypographyProps } from "./atomInterface";
 
-type Props = {
-  className: string;
-  children: ReactNode | string;
-};
-
-export default function Typography({ className, children }: Props) {
+export default function Typography({ className, children }: TypographyProps) {
   return <p className={`${className}`}>{children}</p>;
 }

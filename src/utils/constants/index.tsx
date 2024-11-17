@@ -3,6 +3,9 @@ import itemIcon2 from "@/assets/itemIcon2.png";
 import itemIcon3 from "@/assets/itemIcon3.png";
 import itemIcon4 from "@/assets/itemIcon4.png";
 
+import Profile from "@/assets/profile.png";
+import { FaGlobe, FaNewspaper, FaCube, FaChartLine } from "react-icons/fa";
+
 export const DROPDOWN_OPTIONS = [
   { label: "해외 개발자 원격 채용" },
   {
@@ -57,4 +60,47 @@ export const DESCRIPTION_ABOUT = [
     subTitle: "서울특별시 강남대로 479, 지하 1층 238호 ",
     info: "D-138, Street number 11, Jagjeet Nagar, North East Delhi, New Delhi, 110053 India",
   },
+];
+
+export const CAROUSAL_PROFILES = [
+  {
+    name: "Abhishek Gupta",
+    role: "마케팅 · 2y+",
+    profileImage: Profile,
+    skills: ["마케팅 콘텐츠 제작", "인스타그램 관리", "트위터 관리"],
+    tooltip: "월 100만원",
+  },
+
+  {
+    name: "Parikshit Gupta",
+    role: "마케팅 · 4y+",
+    profileImage: Profile,
+    skills: ["마케팅 콘텐츠 제작", "인스타그램 관리", "트위터 관리"],
+    tooltip: "월 100만원",
+  },
+  {
+    name: "RishubKavya Gupta",
+    role: "마케팅 · 5y+",
+    profileImage: Profile,
+    skills: ["마케팅 콘텐츠 제작", "인스타그램 관리", "트위터 관리"],
+    tooltip: "월 100만원",
+  },
+  {
+    name: "Kavya Gupta",
+    role: "마케팅 · 1y+",
+    profileImage: Profile,
+    skills: ["마케팅 콘텐츠 제작", "인스타그램 관리", "트위터 관리"],
+    tooltip: "월 100만원",
+  },
+];
+
+export const BANNER_SLIDER_ITEMS = [
+  { icon: <FaGlobe />, label: "해외 마케팅" },
+  { icon: <FaNewspaper />, label: "퍼블리셔" },
+  { icon: <FaCube />, label: "캐드원(제도사)" },
+  { icon: <FaChartLine />, label: "해외 세일즈" },
+  { icon: <FaGlobe />, label: "해외 마케팅" },
+  { icon: <FaNewspaper />, label: "퍼블리셔" },
+  { icon: <FaCube />, label: "캐드원(제도사)" },
+  { icon: <FaChartLine />, label: "해외 세일즈" },
 ];

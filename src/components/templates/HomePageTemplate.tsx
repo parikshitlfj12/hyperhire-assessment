@@ -1,5 +1,5 @@
 import React from "react";
-import BannerSection from "../organisms/banner-section";
+import BannerSection from "../organisms/BannerSection";
 import { DESCRIPTION_ABOUT, DESCRIPTION_ITEMS, DROPDOWN_OPTIONS } from "@/utils/constants";
 import Header from "../organisms/Header";
 import DescriptionSection from "../organisms/DescriptionSection";

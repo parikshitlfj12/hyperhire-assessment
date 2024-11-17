@@ -1,64 +1,13 @@
 'use client'
+import { BANNER_SLIDER_ITEMS, CAROUSAL_PROFILES } from "@/utils/constants";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import Profile from "@/assets/profile.png";
-import {
-  FaArrowLeft,
-  FaArrowRight,
-  FaGlobe,
-  FaNewspaper,
-  FaCube,
-  FaChartLine,
-} from "react-icons/fa";
-
-const carouselItems = [
-  {
-    name: "Abhishek Gupta",
-    role: "마케팅 · 2y+",
-    profileImage: Profile,
-    skills: ["마케팅 콘텐츠 제작", "인스타그램 관리", "트위터 관리"],
-    tooltip: "월 100만원",
-  },
-
-  {
-    name: "Parikshit Gupta",
-    role: "마케팅 · 4y+",
-    profileImage: Profile,
-    skills: ["마케팅 콘텐츠 제작", "인스타그램 관리", "트위터 관리"],
-    tooltip: "월 100만원",
-  },
-  {
-    name: "RishubKavya Gupta",
-    role: "마케팅 · 5y+",
-    profileImage: Profile,
-    skills: ["마케팅 콘텐츠 제작", "인스타그램 관리", "트위터 관리"],
-    tooltip: "월 100만원",
-  },
-  {
-    name: "Kavya Gupta",
-    role: "마케팅 · 1y+",
-    profileImage: Profile,
-    skills: ["마케팅 콘텐츠 제작", "인스타그램 관리", "트위터 관리"],
-    tooltip: "월 100만원",
-  },
-];
-
-const items = [
-  { icon: <FaGlobe />, label: "해외 마케팅" },
-  { icon: <FaNewspaper />, label: "퍼블리셔" },
-  { icon: <FaCube />, label: "캐드원(제도사)" },
-  { icon: <FaChartLine />, label: "해외 세일즈" },
-  { icon: <FaGlobe />, label: "해외 마케팅" },
-  { icon: <FaNewspaper />, label: "퍼블리셔" },
-  { icon: <FaCube />, label: "캐드원(제도사)" },
-  { icon: <FaChartLine />, label: "해외 세일즈" },
-  // Add more items if needed
-];
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 export default function BannerSection({}) {
-  const totalItems = carouselItems.length;
+  const totalItems = CAROUSAL_PROFILES.length;
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleItems, setVisibleItems] = useState(items);
+  const [visibleItems, setVisibleItems] = useState(BANNER_SLIDER_ITEMS);
   const slideInterval = 5000;
 
   useEffect(() => {
@@ -86,9 +35,9 @@ export default function BannerSection({}) {
     const prevIndex = (currentIndex - 1 + totalItems) % totalItems;
     const nextIndex = (currentIndex + 1) % totalItems;
     return [
-      carouselItems[prevIndex],
-      carouselItems[currentIndex],
-      carouselItems[nextIndex],
+      CAROUSAL_PROFILES[prevIndex],
+      CAROUSAL_PROFILES[currentIndex],
+      CAROUSAL_PROFILES[nextIndex],
     ];
   };
 

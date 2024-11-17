@@ -1,10 +1,5 @@
 import React from "react";
-
-type ButtonProps = {
-  children: React.ReactNode;
-  className?: string;
-  onClick?: () => void;
-};
+import { ButtonProps } from "./atomInterface";
 
 const Button: React.FC<ButtonProps> = ({
   children,
