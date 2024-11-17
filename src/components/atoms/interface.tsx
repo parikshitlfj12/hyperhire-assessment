@@ -24,3 +24,13 @@ export type TypographyProps = {
   className?: string;
   children: ReactNode | string;
 };
+
+export interface SliderItems {
+  icon: React.ReactNode;
+  label: string;
+}
+
+export interface SliderProps {
+  items: SliderItems[];
+  interval: number;
+}

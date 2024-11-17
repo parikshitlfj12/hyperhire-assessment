@@ -9,6 +9,7 @@ export default function Tooltip({ text, icon = "💵" }: TooltipProps) {
         </div>
         <span className="text-md font-bold">{text}</span>
       </div>
+      {/* Tooltip arrow */}
       <div className="absolute bottom-[-4px] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#E6FAF5] rotate-45 shadow-md"></div>
     </div>
   );

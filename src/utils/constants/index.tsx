@@ -67,7 +67,7 @@ export const CAROUSAL_PROFILES = [
     name: "Abhishek Gupta",
     role: "마케팅 · 2y+",
     profileImage: Profile,
-    skills: ["마케팅 콘텐츠 제작", "인스타그램 관리", "트위터 관리"],
+    skills: ["마케팅= 제작", "인스타그램 관리", "트위터 관리"],
     tooltip: "월 100만원",
   },
 
@@ -75,21 +75,21 @@ export const CAROUSAL_PROFILES = [
     name: "Parikshit Gupta",
     role: "마케팅 · 4y+",
     profileImage: Profile,
-    skills: ["마케팅 콘텐츠 제작", "인스타그램 관리", "트위터 관리"],
+    skills: ["마케팅= 제작", "인스타그램 관리", "트위터 관리"],
     tooltip: "월 100만원",
   },
   {
     name: "RishubKavya Gupta",
     role: "마케팅 · 5y+",
     profileImage: Profile,
-    skills: ["마케팅 콘텐츠 제작", "인스타그램 관리", "트위터 관리"],
+    skills: ["마케팅= 제작", "인스타그램 관리", "트위터 관리"],
     tooltip: "월 100만원",
   },
   {
     name: "Kavya Gupta",
     role: "마케팅 · 1y+",
     profileImage: Profile,
-    skills: ["마케팅 콘텐츠 제작", "인스타그램 관리", "트위터 관리"],
+    skills: ["마케팅= 제작", "인스타그램 관리", "트위터 관리"],
     tooltip: "월 100만원",
   },
 ];
