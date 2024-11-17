@@ -1,4 +1,3 @@
-import Header from "@/components/organisms/Header";
 import BannerSection from "@/components/organisms/BannerSection";
 import DescriptionSection from "@/components/organisms/DescriptionSection";
 import { DropdownItem } from "@/components/atoms/interface";
@@ -8,6 +7,7 @@ import {
   DescriptionItem,
   DescriptionAbout,
 } from "@/components/organisms/interface";
+import NavBar from "@/components/organisms/NavBar";
 
 interface HomePageTemplateProps {
   bannerSliderItems: BannerSliderItem[];
@@ -26,7 +26,7 @@ export default function HomePageTemplate({
 }: HomePageTemplateProps) {
   return (
     <>
-      <Header dropDownOptions={dropDownOptions} />
+      <NavBar dropDownOptions={dropDownOptions} />
       <BannerSection
         carousalProfiles={carousalProfiles}
         bannerSliderItems={bannerSliderItems}

@@ -7,8 +7,7 @@ import Button from "../atoms/Button";
 import Link from "next/link";
 import { HeaderProps } from "./interface";
 
-
-export default function Header({ dropDownOptions }: HeaderProps) {
+export default function NavBar({ dropDownOptions }: HeaderProps) {
   return (
     <div className="bg-gradient-to-r from-teal-400 to-blue-600 p-4">
       {/* Header */}
