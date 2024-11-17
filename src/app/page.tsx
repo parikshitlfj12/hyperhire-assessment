@@ -1,17 +1,7 @@
-"use client";
-
-import BannerSection from "@/components/organisms/banner-section";
-import DescriptionSection from "@/components/organisms/description-section";
-import Header from "@/components/organisms/header";
+import HomePageTemplate from "@/components/templates/HomePageTemplate";
 
 const Page = () => {
-  return (
-    <>
-      <Header />
-      <BannerSection />
-      <DescriptionSection />
-    </>
-  );
+  return <HomePageTemplate />;
 };
 
 export default Page;
