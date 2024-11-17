@@ -40,7 +40,7 @@ export default function BannerSection({
         {/* Header Section */}
         <div className="flex flex-col items-center w-[50%]">
           <section className="mb-12">
-            <Typography className="inline-block bg-[#FFFFFF] text-[#40E2E8] font-semibold px-4 py-1 rounded-[8px] text-sm mb-4">
+            <Typography className="inline-block bg-[#FFFFFF] text-[#40E2E8] font-bold px-4 py-1 rounded-[8px] text-sm mb-4">
               풀타임, 파트타임
             </Typography>
 
@@ -58,11 +58,11 @@ export default function BannerSection({
 
           {/* Additional Information Section */}
           <section className="flex flex-col md:flex-row md:space-x-6 ">
-            <div className="p-6 rounded-lg max-w-sm mb-4 md:mb-0">
+            <div className="mr-6 pt-4 max-w-sm mb-4 md:mb-0 border-t border-t-white">
               <Typography className="font-semibold">평균 월 120만원</Typography>
               <Typography>임금을 해당 국가를 기준으로 계산합니다.</Typography>
             </div>
-            <div className="p-6 rounded-lg max-w-sm mb-4 md:mb-0">
+            <div className="mr-6 pt-4 max-w-sm mb-4 md:mb-0 border-t border-t-white">
               <Typography className="font-semibold">
                 최대 3회 인력교체
               </Typography>
@@ -70,7 +70,7 @@ export default function BannerSection({
                 막상 채용해보니 맞지 않아도 걱정하지 마세요.
               </Typography>
             </div>
-            <div className="p-6 rounded-lg max-w-sm">
+            <div className="pt-4 max-w-sm border-t border-t-white">
               <Typography className="font-semibold">
                 평균 3일, 최대 10일
               </Typography>
@@ -83,16 +83,14 @@ export default function BannerSection({
 
         {/* Card Section */}
         <div className="flex flex-col w-[50%] justify-center items-center">
-          {/* Tooltip Above the Carousel */}
           <Tooltip text="월 100만원" />
-
-          {/* Carousel Wrapper */}
           <div className="relative flex items-center gap-4">
             {/* Left Navigation Button */}
             <button onClick={handlePrev} className="text-white text-2xl">
               <FaArrowLeft />
             </button>
 
+            {/* Profile Cards */}
             <div className="flex w-[100%] justify-center relative">
               <div className="flex w-[100%] justify-center relative">
                 {displayedItems.map((item, index) => {
@@ -125,7 +123,7 @@ export default function BannerSection({
       </div>
 
       {/* Slider */}
-      <div className="max-w-7xl mx-auto mt-5 flex justify-between overflow-hidden rounded-lg gap-2">
+      <div className="max-w-7xl mx-auto mt-[50px] flex justify-between overflow-hidden rounded-lg gap-2">
         <Slider items={bannerSliderItems} interval={5000} />
       </div>
     </div>
