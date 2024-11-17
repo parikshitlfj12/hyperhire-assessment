@@ -18,7 +18,7 @@ export default async function Page() {
       />
     );
   } catch (error) {
-    console.error("Error fetching data:", error);
+    console.error("Error fetching data from  ==== ", apiBaseUrl, error);
     return <div>Error fetching data. Please try again later.</div>;
   }
 }
