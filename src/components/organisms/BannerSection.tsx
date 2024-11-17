@@ -7,6 +7,8 @@ import Tooltip from "../atoms/Tooltip";
 import ProfileCard from "../molecules/ProfileCard";
 import Slider from "../molecules/Slider";
 import { motion } from "framer-motion";
+import CheckboxIcon from "@/assets/Checkbox.png";
+import Image from "next/image";
 
 export default function BannerSection({
   carousalProfiles,
@@ -36,18 +38,18 @@ export default function BannerSection({
   const displayedItems = getDisplayedItems();
 
   return (
-    <div className="py-[50px] bg-gradient-to-r from-teal-400 to-blue-600">
-      <div className="max-w-7xl text-white flex justify-between items-center gap-12 mx-auto">
+    <div className="px-5 py-[50px] bg-gradient-to-r from-teal-400 to-blue-600">
+      <div className="max-w-7xl text-white flex flex-col md:flex-row justify-between items-center gap-12 mx-auto flex-wrap">
         {/* Header Section */}
-        <div className="flex flex-col items-center w-[50%]">
-          <section className="mb-12">
+        <div className="flex flex-1  flex-col  items-center  ">
+          <section className="mb-0 md:mb-12">
             {/* FadeIn with delay for first Typography */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <Typography className="inline-block bg-[#FFFFFF] text-[#40E2E8] font-bold px-4 py-1 rounded-[8px] text-sm mb-4">
+              <Typography className="inline-block bg-[#FFFFFF] text-[#40E2E8] font-bold px-4 py-2 rounded-[8px] text-sm mb-4">
                 풀타임, 파트타임
               </Typography>
             </motion.div>
@@ -80,7 +82,7 @@ export default function BannerSection({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="flex flex-col md:flex-row md:space-x-6 "
+            className="hidden md:flex flex-col md:flex-row md:space-x-6 "
           >
             <div className="mr-6 pt-4 max-w-sm mb-4 md:mb-0 border-t border-t-white">
               <Typography className="font-semibold">평균 월 120만원</Typography>
@@ -106,7 +108,7 @@ export default function BannerSection({
         </div>
 
         {/* Card Section */}
-        <div className="flex flex-col w-[50%] justify-center items-center">
+        <div className="flex flex-1 flex-col  justify-center items-center">
           {/* FadeIn Tooltip */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -162,10 +164,32 @@ export default function BannerSection({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 1 }}
-        className="max-w-7xl mx-auto mt-[50px] flex justify-between overflow-hidden rounded-lg gap-2"
+        className="hidden max-w-7xl mx-auto mt-[50px] md:flex justify-between overflow-hidden rounded-lg gap-2"
       >
         <Slider items={bannerSliderItems} interval={5000} />
       </motion.div>
+      <div className="flex md:hidden mt-[50px] justify-start gap-2 max-w-[800px] flex-wrap">
+        {["한국어 능력", "업무 수행 능력", "겸업 여부", "평판 조회"].map(
+          (item, index) => {
+            return (
+              <div
+                key={index}
+                className="flex gap-2 items-center justify-start flex-1 min-w-[100px]"
+              >
+                <Image
+                  src={CheckboxIcon}
+                  height={20}
+                  width={20}
+                  alt="Checkbox"
+                />
+                <Typography className="text-sm text-bold text-white">
+                  {item}
+                </Typography>
+              </div>
+            );
+          }
+        )}
+      </div>
     </div>
   );
 }
