@@ -16,5 +16,11 @@ export async function GET() {
     dropDownOptions: DROPDOWN_OPTIONS,
   };
 
-  return NextResponse.json(data);
+  try {
+    const jsonData = JSON.stringify(data);
+    return new NextResponse(jsonData, { status: 200, headers: { 'Content-Type': 'application/json' } });
+  } catch (error) {
+    console.error("Error serializing response:", error);
+    return new NextResponse(JSON.stringify({ error: "Internal Server Error" }), { status: 500 });
+  }
 }
