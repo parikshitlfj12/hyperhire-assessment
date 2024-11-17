@@ -1,26 +1,39 @@
-import React from "react";
-import BannerSection from "../organisms/BannerSection";
-import {
-  BANNER_SLIDER_ITEMS,
-  CAROUSAL_PROFILES,
-  DESCRIPTION_ABOUT,
-  DESCRIPTION_ITEMS,
-  DROPDOWN_OPTIONS,
-} from "@/utils/constants";
 import Header from "../organisms/Header";
+import BannerSection from "../organisms/BannerSection";
 import DescriptionSection from "../organisms/DescriptionSection";
+import { DropdownItem } from "../atoms/interface";
+import {
+  BannerSliderItem,
+  ProfileItem,
+  DescriptionItem,
+  DescriptionAbout,
+} from "../organisms/interface";
 
-export default function HomePageTemplate({}) {
+interface HomePageTemplateProps {
+  bannerSliderItems: BannerSliderItem[];
+  carousalProfiles: ProfileItem[];
+  descriptionItems: DescriptionItem[];
+  descriptionAbout: DescriptionAbout[];
+  dropDownOptions: DropdownItem[];
+}
+
+export default function HomePageTemplate({
+  bannerSliderItems,
+  carousalProfiles,
+  descriptionItems,
+  descriptionAbout,
+  dropDownOptions,
+}: HomePageTemplateProps) {
   return (
     <>
-      <Header dropDownOptions={DROPDOWN_OPTIONS} />
+      <Header dropDownOptions={dropDownOptions} />
       <BannerSection
-        carousalProfiles={CAROUSAL_PROFILES}
-        bannerSliderItems={BANNER_SLIDER_ITEMS}
+        carousalProfiles={carousalProfiles}
+        bannerSliderItems={bannerSliderItems}
       />
       <DescriptionSection
-        descriptionItems={DESCRIPTION_ITEMS}
-        descriptionAbout={DESCRIPTION_ABOUT}
+        descriptionItems={descriptionItems}
+        descriptionAbout={descriptionAbout}
       />
     </>
   );

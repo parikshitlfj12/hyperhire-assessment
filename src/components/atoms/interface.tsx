@@ -26,7 +26,6 @@ export type TypographyProps = {
 };
 
 export interface SliderItems {
-  icon: React.ReactNode;
   label: string;
 }
 

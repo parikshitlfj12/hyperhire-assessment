@@ -1,7 +1,5 @@
-import { StaticImageData } from "next/image";
-
 export interface ProfileCardProps {
-  profileImage: StaticImageData;
+  profileImage: string;
   name: string;
   role: string;
   skills: string[];

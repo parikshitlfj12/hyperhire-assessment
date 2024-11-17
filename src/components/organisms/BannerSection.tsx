@@ -3,11 +3,10 @@ import React, { useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Typography from "../atoms/Typography";
 import { BannerSectionInterface } from "./interface";
-import Link from "next/link";
 import Tooltip from "../atoms/Tooltip";
 import ProfileCard from "../molecules/ProfileCard";
 import Slider from "../molecules/Slider";
-import { motion } from "framer-motion";  // Import motion
+import { motion } from "framer-motion";
 
 export default function BannerSection({
   carousalProfiles,
@@ -139,7 +138,7 @@ export default function BannerSection({
                 return (
                   <ProfileCard
                     key={index}
-                    profileImage={item.profileImage}
+                    profileImage={item.profileImage.src}
                     name={item.name}
                     role={item.role}
                     skills={item.skills}

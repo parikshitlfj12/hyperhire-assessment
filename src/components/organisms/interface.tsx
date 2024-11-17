@@ -33,7 +33,6 @@ export interface ProfileItem {
 }
 
 export interface BannerSliderItem {
-  icon: ReactNode | string;
   label: string;
 }
 

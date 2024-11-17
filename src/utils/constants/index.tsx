@@ -4,7 +4,6 @@ import itemIcon3 from "@/assets/itemIcon3.png";
 import itemIcon4 from "@/assets/itemIcon4.png";
 
 import Profile from "@/assets/profile.png";
-import { FaGlobe, FaNewspaper, FaCube, FaChartLine } from "react-icons/fa";
 
 export const DROPDOWN_OPTIONS = [
   { label: "해외 개발자 원격 채용" },
@@ -95,12 +94,12 @@ export const CAROUSAL_PROFILES = [
 ];
 
 export const BANNER_SLIDER_ITEMS = [
-  { icon: <FaGlobe />, label: "해외 마케팅" },
-  { icon: <FaNewspaper />, label: "퍼블리셔" },
-  { icon: <FaCube />, label: "캐드원(제도사)" },
-  { icon: <FaChartLine />, label: "해외 세일즈" },
-  { icon: <FaGlobe />, label: "해외 마케팅" },
-  { icon: <FaNewspaper />, label: "퍼블리셔" },
-  { icon: <FaCube />, label: "캐드원(제도사)" },
-  { icon: <FaChartLine />, label: "해외 세일즈" },
+  { label: "해외 마케팅" },
+  { label: "퍼블리셔" },
+  { label: "캐드원(제도사)" },
+  { label: "해외 세일즈" },
+  { label: "해외 마케팅" },
+  { label: "퍼블리셔" },
+  { label: "캐드원(제도사)" },
+  { label: "해외 세일즈" },
 ];
